@@ -101,7 +101,12 @@ class File_Search_Replace
 		}
 		else 
 		{
-			$this->clean = array( 'directory' => realpath( dirname( __FILE__ ) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR ) . DIRECTORY_SEPARATOR );
+			$this->extract = array(
+				'clean' => array(
+					'directory' =>	realpath( dirname( __FILE__ ) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR )
+									. DIRECTORY_SEPARATOR
+				)
+			);
 		}
 		$this->get( 'default.php' );
 	}
